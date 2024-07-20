@@ -1,0 +1,33 @@
+.fotos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-blanco;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+
+  img {
+    max-width: 100%;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  button {
+    background-color: $marron-botones;
+    color: $color-blanco;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: $naranja-botones;
+    }
+  }
+}

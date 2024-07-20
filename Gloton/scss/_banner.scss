@@ -1,0 +1,62 @@
+/* Banner */
+
+.banner {
+  background-image: url(../img/fondobanner.jpg);
+  height: calc(100vh - 100px);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bannerdivisor {
+  background-color: $marron-botones;
+  height: calc(25vh - 80px);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.bannerContenido {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $color-blanco;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $color-blanco;
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .boton {
+    margin-top: 10px;
+  }
+}

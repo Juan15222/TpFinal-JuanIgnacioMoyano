@@ -1,0 +1,52 @@
+/* Header */
+
+@mixin anclas {
+  text-decoration: none;
+  color: black;
+}
+
+.encabezado {
+  font-family: "Pacifico", cursive;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 2.5rem;
+  }
+}
+
+.boton {
+  background-color: $marron-botones;
+  color: $color-blanco;
+  font-weight: 700;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: $naranja-botones;
+    color: $color-blanco;
+    cursor: pointer;
+  }
+}
+
+.encabezado li {
+  list-style-type: none;
+  display: inline-block;
+
+  a {
+    @include anclas;
+    margin: 10px;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: $marron-botones;
+    }
+  }
+}
