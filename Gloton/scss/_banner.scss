@@ -59,4 +59,32 @@
   .boton {
     margin-top: 10px;
   }
+
+
+  $animation-duration: 3s;
+  $color-start: #ff6347; 
+  $color-mid: #4682b4; 
+  $color-end: #32cd32; 
+
+  .color-changing-text {
+    display: inline-block;
+    font-size: 3em; 
+    color: $color-start;
+    animation: colorChange $animation-duration linear infinite;
+
+    @keyframes colorChange {
+      0% {
+        color: $color-start;
+      }
+
+      50% {
+        color: $color-mid;
+      }
+
+      100% {
+        color: $color-end;
+      }
+    }
+  }
+
 }

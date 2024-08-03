@@ -28,3 +28,155 @@
   padding: 20px;
   text-align: center;
 }
+
+$carousel-width: 470px;
+$carousel-height: 370px;
+$control-color: #ffffff;
+$control-bg: rgba(0, 0, 0, 0.5);
+$control-hover-bg: rgba(0, 0, 0, 0.8);
+$transition-duration: 0.5s;
+
+.carousel {
+  position: relative;
+  max-width: $carousel-width;
+  margin: auto;
+  overflow: hidden;
+  border: 2px solid #000000;
+
+  .carousel-images {
+    display: flex;
+    transition: transform $transition-duration ease-in-out;
+
+    img {
+      width: $carousel-width;
+      height: $carousel-height;
+      display: block;
+    }
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: $control-color;
+    font-weight: bold;
+    font-size: 24px;
+    transition: background-color 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: $control-bg;
+
+    &:hover {
+      background-color: $control-hover-bg;
+    }
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+}
+
+$primary-color: #000000;
+$secondary-color: rgb(88, 60, 60);
+$text-color: #333;
+$border-radius: 4px;
+$padding: 16px;
+
+// Grilla contacto
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: $padding;
+  background-color: $marron-botones;
+  border-radius: $border-radius;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+
+    .form-group {
+      margin-bottom: 15px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: $padding;
+        border: 1px solid #ddd;
+        border-radius: $border-radius;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: $padding;
+      border: none;
+      border-radius: $border-radius;
+      background-color: $secondary-color;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($secondary-color, 10%);
+      }
+    }
+  }
+}
+
+$animation-duration: 10s;
+$text-color: #333;
+$background-color: $marron-botones;
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: $text-color;
+  background-color: $background-color;
+  animation: scroll $animation-duration linear infinite;
+
+  // Animación para el texto
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
